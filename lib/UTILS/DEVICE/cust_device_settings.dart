@@ -43,3 +43,9 @@ double mqH(BuildContext context) {
 double mqW(BuildContext context) {
   return MediaQuery.of(context).size.width;
 }
+
+bool isDarkMode(BuildContext context) {
+  Brightness platformBrightness = MediaQuery.of(context).platformBrightness;
+  bool isDarkMode = platformBrightness == Brightness.dark;
+  return isDarkMode;
+}

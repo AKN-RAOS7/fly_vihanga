@@ -2,11 +2,12 @@
 
 
 name: fly_vihanga 
-description: "A new Flutter project."
+description: "TRAVEL AND TRANSPORT APP"
 
 publish_to: "none"
 version: 1.0.0+1
 
+# FLUTTER -V: 3.16.9 
 environment:
   sdk: ">=3.2.3 <4.0.0"
 

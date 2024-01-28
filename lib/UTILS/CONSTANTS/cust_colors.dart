@@ -10,6 +10,8 @@ Color secondaryColor = const Color.fromRGBO(146, 169, 255, 1);
 const Color red = Colors.red;
 const Color grey = Colors.grey;
 const Color green = Colors.green;
+const Color rGreen = Color.fromARGB(255, 33, 240, 40);
+
 const Color blue = Colors.blue;
 const Color black = Colors.black;
 const Color white = Colors.white;

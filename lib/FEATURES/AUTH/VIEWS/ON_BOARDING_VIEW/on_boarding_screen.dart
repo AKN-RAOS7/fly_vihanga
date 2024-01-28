@@ -7,18 +7,19 @@ import '../../../../COMMON/size_box.dart';
 import '../../../../UTILS/CONSTANTS/cust_colors.dart';
 import '../../../../UTILS/CONSTANTS/cust_image_strings.dart';
 import '../../../../UTILS/CONSTANTS/cust_text_strings.dart';
+import '../../../../UTILS/DEVICE/cust_device_settings.dart';
 import '../../../../UTILS/THEMES/cust_text_theme.dart';
-import '../../MODELS/on_boarding_model.dart';
+import '../../MODELS/ON_BOARDING_MODEL/on_boarding_model.dart';
 import '../../STATELESS_WIDGETS/ON_BOARDING_STATELESS_WIDGET/on_boarding_page_widget.dart';
 
-class OnBoardingScreen1 extends StatefulWidget {
-  const OnBoardingScreen1({super.key});
+class OnBoardingScreen extends StatefulWidget {
+  const OnBoardingScreen({super.key});
 
   @override
-  State<OnBoardingScreen1> createState() => _OnBoardingScreen1State();
+  State<OnBoardingScreen> createState() => _OnBoardingScreenState();
 }
 
-class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
+class _OnBoardingScreenState extends State<OnBoardingScreen> {
   final controller = LiquidController();
   int currentPage = 0;
 
@@ -98,7 +99,8 @@ class _OnBoardingScreen1State extends State<OnBoardingScreen1> {
                   onPressed: () => controller.jumpToPage(page: 2),
                   child: Text(
                     "Skip",
-                    style: ttsLLarge(context),
+                    style: ttsLLarge(context)
+                        .copyWith(color: isDarkMode(context) ? green : white),
                   ),
                 ),
               ),

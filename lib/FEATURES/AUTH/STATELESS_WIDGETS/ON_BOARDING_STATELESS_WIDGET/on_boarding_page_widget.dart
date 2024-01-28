@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:fly_vihanga/COMMON/size_box.dart';
-import 'package:fly_vihanga/FEATURES/AUTH/MODELS/on_boarding_model.dart';
-import 'package:fly_vihanga/UTILS/CONSTANTS/cust_sizes.dart';
-import 'package:fly_vihanga/UTILS/DEVICE/cust_device_settings.dart';
-import 'package:fly_vihanga/UTILS/THEMES/cust_text_theme.dart';
+
+import '../../../../COMMON/size_box.dart';
+import '../../../../UTILS/CONSTANTS/cust_colors.dart';
+import '../../../../UTILS/CONSTANTS/cust_sizes.dart';
+import '../../../../UTILS/DEVICE/cust_device_settings.dart';
+import '../../../../UTILS/THEMES/cust_text_theme.dart';
+import '../../MODELS/ON_BOARDING_MODEL/on_boarding_model.dart';
 
 class OnBoardingPageWidget extends StatelessWidget {
   const OnBoardingPageWidget({
@@ -36,12 +38,14 @@ class OnBoardingPageWidget extends StatelessWidget {
             Text(
               model.title,
               textAlign: TextAlign.center,
-              style: ttsHLMedium(context),
+              style: ttsHLMedium(context)
+                  .copyWith(color: isDarkMode(context) ? rGreen : white),
             ),
             Text(
               model.subTitle,
               textAlign: TextAlign.center,
-              style: ttsBSmall(context),
+              style: ttsBSmall(context)
+                  .copyWith(color: isDarkMode(context) ? white : white),
             )
           ],
         ),
