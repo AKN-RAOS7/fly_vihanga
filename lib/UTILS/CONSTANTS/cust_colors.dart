@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 // ****************** App Colors******/
 
-Color appColor = const Color.fromARGB(255, 8, 6, 48);
-Color primaryColor = const Color.fromRGBO(43, 35, 255, 1);
-Color secondaryColor = const Color.fromRGBO(146, 169, 255, 1);
+Color appColor = const Color.fromRGBO(121, 16, 89, 20);
+Color primaryColor = const Color.fromRGBO(175, 77, 70, 5);
+Color secondaryColor = const Color.fromRGBO(220, 150, 30, 3);
 
 // ******************** Preset Colors******/
 const Color red = Colors.red;

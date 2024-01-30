@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fly_vihanga/UTILS/CONSTANTS/project_text.dart';
 
 import '../../../../COMMON/size_box.dart';
 import '../../../../UTILS/CONSTANTS/cust_colors.dart';
@@ -18,36 +19,53 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: buildBody());
+    return SafeArea(
+        child: Scaffold(
+            backgroundColor:
+                isDarkMode(context) ? appColor.withOpacity(0.2) : white,
+            body: buildBody()));
   }
 
   buildBody() {
     return Padding(
       padding: const EdgeInsets.all(CustSizes.lg),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            CustTextStg.welcomeScreenAppName,
-            style: ttsHLLarge(context),
-          ),
-          Container(
-            height: mqH(context) / 2,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                image: const DecorationImage(
-                    image: AssetImage(CustImageStg.welcomeImage),
-                    fit: BoxFit.cover)),
-          ),
           Column(
             children: [
-              Text(CustTextStg.welcomeScreenTitle,
-                  textAlign: TextAlign.center, style: ttsHLMedium(context)),
+              Container(
+                height: mqH(context) / 4,
+                decoration: BoxDecoration(
+                    // color: grey,
+                    borderRadius: BorderRadius.circular(20),
+                    image: const DecorationImage(
+                        image: AssetImage(CustImageStg.applogo),
+                        fit: BoxFit.contain)),
+              ),
+              Text(
+                CustTextStg.welcomeScreenAppName,
+                style: ttsHLMedium(context).copyWith(fontFamily: fontsFamily2),
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                CustTextStg.welcomeScreenTitle,
+                // textAlign: TextAlign.center,
+                style: ttsHLMedium(context).copyWith(
+                  fontFamily: fontsFamily2,
+                ),
+              ),
               sH(10),
               Text(
                 CustTextStg.welcomeScreenSubTitle,
-                style: ttsBLarge(context),
+                // textAlign: TextAlign.center,
+                style: ttsHLSmall(context).copyWith(color: secondaryColor),
               ),
             ],
           ),

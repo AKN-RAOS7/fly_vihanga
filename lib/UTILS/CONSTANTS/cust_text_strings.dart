@@ -13,12 +13,16 @@ class CustTextStg {
   static const onboardingSubTitle3 =
       "Here You'll Se Rich varients of goods ,classified for seamless browsing experience.";
 
+  //* Splash screen const text
+  static const appName = 'Fly-Vihanga';
+  static const appNameSubtitle = 'Wings to fly High....!';
+
   //* Welcome screen const text
-  static const aLogin = 'Login';
+  static const aLogin = 'SignIn';
   static const aSignUp = 'SignUp';
-  static const welcomeScreenAppName = "AK-ECOMM";
-  static const welcomeScreenTitle = 'Welcome to a World of Limitless Choices ';
+  static const welcomeScreenAppName = "Fly-Vihanga";
+  static const welcomeScreenTitle = 'Welcome to our FlyVihanga Mobile App ';
   static const welcomeScreenSubTitle =
-      'Sign up with your Account and get started';
+      'Sign up with your Account and get started.....!!';
   //* Home screen const text
 }

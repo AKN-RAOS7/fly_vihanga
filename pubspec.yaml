@@ -5,7 +5,7 @@ name: fly_vihanga
 description: "TRAVEL AND TRANSPORT APP"
 
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.0+2
 
 # FLUTTER -V: 3.16.9 
 environment:
@@ -25,6 +25,7 @@ dependencies:
   cached_network_image:
   liquid_swipe:
   smooth_page_indicator: 
+  google_fonts: 
 
 
 

@@ -30,8 +30,8 @@ class OnBoardingPageWidget extends StatelessWidget {
                 image: AssetImage(model.image),
                 fit: BoxFit.cover,
               )),
-          height: mqH(context) / 2,
-          width: mqW(context),
+          height: mqH(context) / 3,
+          width: mqW(context) * 0.8,
         ),
         Column(
           children: [
