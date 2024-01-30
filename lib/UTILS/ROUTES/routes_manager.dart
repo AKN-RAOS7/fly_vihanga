@@ -40,8 +40,8 @@ class RouteManager {
 
   static void configureRoutes() {
     Get.config(
-      defaultTransition: Transition.fade,
-      defaultDurationTransition: const Duration(milliseconds: 300),
+      defaultTransition: Transition.downToUp,
+      defaultDurationTransition: const Duration(microseconds: 3000),
       enableLog: true,
       defaultGlobalState: true,
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fly_vihanga/UTILS/CONSTANTS/project_text.dart';
+import 'package:get/get.dart';
 
 import '../../../../COMMON/size_box.dart';
 import '../../../../UTILS/CONSTANTS/cust_colors.dart';
@@ -82,7 +83,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               sW(10),
               Expanded(
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Get.toNamed('/OnBoardingScreen');
+                    },
                     child: Text(
                       CustTextStg.aSignUp.toUpperCase(),
                       style: ttsBLarge(context).copyWith(color: white),
