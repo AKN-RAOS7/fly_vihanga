@@ -50,6 +50,7 @@ dependencies:
 #*==========================UI Needs=============================#
 
   dotted_line: 
+  loading_animation_widget: 
 
 
 
@@ -72,6 +73,7 @@ flutter:
   assets:
     - assets/IMAGES/ON_BOARDING/
     - assets/IMAGES/WELCOME/
+    - assets/IMAGES/LOGOS/
     - assets/GIFS/
     - shorebird.yaml
   #   - assets/SVGS

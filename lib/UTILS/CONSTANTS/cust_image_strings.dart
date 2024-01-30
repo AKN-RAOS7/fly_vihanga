@@ -1,6 +1,7 @@
 class CustImageStg {
   CustImageStg._();
   //* App logos
+  static const String applogo = 'assets/IMAGES/LOGOS/Splash_Logo.png';
   static const String lightApplogo = '';
   static const String darkApplogo = '';
 
