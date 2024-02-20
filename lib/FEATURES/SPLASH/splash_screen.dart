@@ -34,6 +34,25 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
+  buildBNB() {
+    return Container(
+      alignment: Alignment.center,
+      height: mqH(context) * 0.06,
+      color: primaryColor.withOpacity(0.1),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'PowerBy : FlyVihanga',
+            style: GoogleFonts.workSans(textStyle: ttsBMedium(context)),
+          ),
+          Text('App Version:1.0.0',
+              style: GoogleFonts.robotoMono(textStyle: ttsBSmall(context))),
+        ],
+      ),
+    );
+  }
+
   Center buildBody(BuildContext context) {
     return Center(
         child: Column(
@@ -42,9 +61,9 @@ class _SplashScreenState extends State<SplashScreen> {
         Container(
           alignment: Alignment.center,
           height: mqH(context) * 0.3,
-          width: mqW(context) * 0.7,
+          width: mqW(context) * 0.5,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
+              borderRadius: BorderRadius.circular(10),
               // color: primaryColor,
               image: const DecorationImage(
                   image: AssetImage(CustImageStg.applogo),
@@ -68,33 +87,12 @@ class _SplashScreenState extends State<SplashScreen> {
         sH(20),
         Padding(
           padding: const EdgeInsets.all(8.0),
-          child: LoadingAnimationWidget.discreteCircle(
-            secondRingColor: yellow,
-            thirdRingColor: green,
+          child: LoadingAnimationWidget.threeArchedCircle(
             color: isDarkMode(context) ? white : black,
             size: 40,
           ),
         ),
       ],
     ));
-  }
-
-  buildBNB() {
-    return Container(
-      alignment: Alignment.center,
-      height: mqH(context) * 0.07,
-      color: primaryColor.withOpacity(0.1),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'PowerBy : FlyVihanga',
-            style: GoogleFonts.workSans(textStyle: ttsBMedium(context)),
-          ),
-          Text('App Version:1.0.0',
-              style: GoogleFonts.robotoMono(textStyle: ttsBSmall(context))),
-        ],
-      ),
-    );
   }
 }

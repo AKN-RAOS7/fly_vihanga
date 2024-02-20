@@ -6,8 +6,6 @@ import 'package:get/get.dart';
 import '../../FEATURES/AUTH/VIEWS/ON_BOARDING_VIEW/on_boarding_screen.dart';
 import '../../FEATURES/SPLASH/splash_screen.dart';
 
-// ... import other files
-
 class RouteManager {
   static const String splashScreen = '/';
   static const String onBoardingScreen = '/OnBoardingScreen';

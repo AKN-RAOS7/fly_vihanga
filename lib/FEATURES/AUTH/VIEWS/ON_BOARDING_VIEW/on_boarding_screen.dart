@@ -35,7 +35,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           title: CustTextStg.onboardingTitle1,
           subTitle: CustTextStg.onboardingSubTitle1,
           counterText: '1',
-          bgColor: appColor),
+          bgColor: Colors.red.shade900),
     ),
     OnBoardingPageWidget(
       model: OnBoardingModel(
@@ -43,7 +43,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           title: CustTextStg.onboardingTitle2,
           subTitle: CustTextStg.onboardingSubTitle2,
           counterText: '1',
-          bgColor: primaryColor),
+          bgColor: Colors.purple.shade900),
     ),
     OnBoardingPageWidget(
       model: OnBoardingModel(
@@ -51,7 +51,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
           title: CustTextStg.onboardingTitle3,
           subTitle: CustTextStg.onboardingSubTitle3,
           counterText: '1',
-          bgColor: secondaryColor),
+          bgColor: Colors.grey.shade600),
     ),
   ];
 
@@ -75,14 +75,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 controller.animateToPage(page: nextPage);
               },
               style: ElevatedButton.styleFrom(
-                  side: BorderSide(color: primaryColor),
+                  side: const BorderSide(color: black),
                   shape: const CircleBorder(),
                   padding: const EdgeInsets.all(10),
                   foregroundColor: white),
               child: Container(
                 padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    color: secondaryColor, shape: BoxShape.circle),
+                decoration:
+                    const BoxDecoration(color: white, shape: BoxShape.circle),
                 child: const Icon(
                   Iconsax.arrow_right_1,
                   color: black,
@@ -99,8 +99,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onPressed: () => controller.jumpToPage(page: 2),
                   child: Text(
                     "Skip",
-                    style: ttsLLarge(context)
-                        .copyWith(color: isDarkMode(context) ? green : white),
+                    style: ttsTMedium(context)
+                        .copyWith(color: isDarkMode(context) ? black : white),
                   ),
                 ),
               ),
@@ -109,9 +109,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             child: AnimatedSmoothIndicator(
               activeIndex: controller.currentPage,
               count: 3,
-              effect: WormEffect(
-                  activeDotColor: primaryColor,
-                  dotColor: pink,
+              effect: const WormEffect(
+                  activeDotColor: black,
+                  dotColor: yellow,
                   dotHeight: 5,
                   dotWidth: 20),
             )) // TextButton
